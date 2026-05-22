@@ -1,0 +1,72 @@
+version: "3.8"
+
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+
+  minio:
+    image: minio/minio:latest
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: atlasiq
+      MINIO_ROOT_PASSWORD: atlasiq-secret
+    volumes:
+      - minio_data:/data
+    command: server /data --console-address ":9001"
+
+  api:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      REDIS_URL: redis://redis:6379/0
+      CELERY_BROKER_URL: redis://redis:6379/1
+      CELERY_RESULT_BACKEND: redis://redis:6379/2
+      OBJECT_STORAGE_ENABLED: "true"
+      S3_ENDPOINT_URL: http://minio:9000
+      S3_ACCESS_KEY: atlasiq
+      S3_SECRET_KEY: atlasiq-secret
+      S3_BUCKET: atlasiq-data
+      ENTERPRISE_MODE: "true"
+    volumes:
+      - ./backend/data:/app/data
+    depends_on:
+      - redis
+      - minio
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 1
+
+  celery-worker:
+    build: ./backend
+    env_file:
+      - .env
+    environment:
+      REDIS_URL: redis://redis:6379/0
+      CELERY_BROKER_URL: redis://redis:6379/1
+      CELERY_RESULT_BACKEND: redis://redis:6379/2
+      ENTERPRISE_MODE: "true"
+    volumes:
+      - ./backend/data:/app/data
+    depends_on:
+      - redis
+      - api
+    command: celery -A app.worker.celery_app worker --loglevel=info -Q queries -c 4
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - api
+
+volumes:
+  redis_data:
+  minio_data:

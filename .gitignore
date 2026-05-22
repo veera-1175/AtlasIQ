@@ -1,0 +1,14 @@
+.env
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+backend/data/
+node_modules/
+frontend/dist/
+frontend/tsconfig.tsbuildinfo
+*.db
+*.db-wal
+*.db-shm
+!sample_data/sales.db
+sample_data/enterprise_sample.db

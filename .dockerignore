@@ -1,0 +1,11 @@
+.env
+.git
+**/__pycache__
+**/.pytest_cache
+**/node_modules
+**/venv
+backend/data
+frontend/dist
+frontend/tsconfig.tsbuildinfo
+*.md
+!README.md
