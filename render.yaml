@@ -1,0 +1,22 @@
+# Render Blueprint — free HTTPS URL like https://atlasiq-xxxx.onrender.com (no domain needed)
+# Dashboard: New → Blueprint → connect this repo → apply
+services:
+  - type: web
+    name: atlasiq
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: COMPANY_DATA_KEY
+        generateValue: true
+      - key: ENTERPRISE_MODE
+        value: "false"
+      - key: ENABLE_REPORT_SCHEDULER
+        value: "true"
+      - key: ATLASIQ_SUPER_ADMIN_PASSWORD
+        generateValue: true
