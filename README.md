@@ -1,6 +1,11 @@
 # AtlasIQ
 
+[![GitHub](https://img.shields.io/badge/GitHub-veera--1175%2FAtlasIQ-181717?logo=github)](https://github.com/veera-1175/AtlasIQ)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 **Full-stack AI analytics application** — natural language to SQL with role-based access, audit logging, and automated reports.
+
+**Author:** [Veerasegaran V P](https://github.com/veera-1175)
 
 Built as an end-to-end portfolio project to demonstrate backend API design, React front-end engineering, LLM integration, and multi-tenant security patterns relevant to data/analytics and full-stack roles.
 
@@ -68,8 +73,8 @@ flowchart LR
 **Prerequisites:** Python 3.11+, Node 18+, [Groq API key](https://console.groq.com) (free tier)
 
 ```powershell
-git clone https://github.com/veera-1175/atlasiq.git
-cd atlasiq
+git clone https://github.com/veera-1175/AtlasIQ.git
+cd AtlasIQ
 copy .env.example .env
 # Edit .env and set GROQ_API_KEY=...
 .\run.ps1
@@ -132,6 +137,9 @@ See [Render Blueprint](render.yaml) for a free `*.onrender.com` URL, or run `.\s
 
 ## Author
 
-**Veera** — full-stack / AI engineering portfolio project.
+**Veerasegaran V P** — full-stack / AI engineering portfolio project.
+
+- GitHub: [@veera-1175](https://github.com/veera-1175)
+- Repository: [github.com/veera-1175/AtlasIQ](https://github.com/veera-1175/AtlasIQ)
 
 If you are reviewing this for hiring: I can walk through the NL→SQL pipeline, RBAC model, or any module live in ~10 minutes.

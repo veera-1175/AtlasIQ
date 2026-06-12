@@ -2,7 +2,7 @@
 # Dashboard: New → Blueprint → connect this repo → apply
 services:
   - type: web
-    name: atlasiq
+    name: AtlasIQ
     runtime: docker
     dockerfilePath: ./Dockerfile
     plan: free

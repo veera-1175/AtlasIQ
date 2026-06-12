@@ -59,7 +59,7 @@ async def lifespan(_: FastAPI):
 
 app = FastAPI(
     title="AtlasIQ",
-    description="Natural Language to SQL Analytics Intelligence Platform",
+    description="NL-to-SQL analytics API — portfolio project by Veerasegaran V P",
     version="2.0.0",
     lifespan=lifespan,
 )
