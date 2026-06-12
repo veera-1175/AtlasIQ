@@ -348,9 +348,14 @@ def init_app_db() -> None:
 def seed_super_admin() -> None:
     settings = get_settings()
     email = settings.atlasiq_super_admin_email.strip().lower()
+    password_hash = hash_password(settings.atlasiq_super_admin_password)
     with get_db() as conn:
         row = conn.execute("SELECT id FROM users WHERE email = ?", (email,)).fetchone()
         if row:
+            conn.execute(
+                "UPDATE users SET password_hash = ?, is_active = 1 WHERE email = ?",
+                (password_hash, email),
+            )
             return
         conn.execute(
             "INSERT INTO users (id, email, password_hash, platform_role, full_name, is_active, created_at) "
@@ -358,7 +363,7 @@ def seed_super_admin() -> None:
             (
                 str(uuid.uuid4()),
                 email,
-                hash_password(settings.atlasiq_super_admin_password),
+                password_hash,
                 "super_admin",
                 "AtlasIQ Platform Admin",
                 _utcnow(),

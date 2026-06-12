@@ -19,4 +19,4 @@ services:
       - key: ENABLE_REPORT_SCHEDULER
         value: "true"
       - key: ATLASIQ_SUPER_ADMIN_PASSWORD
-        generateValue: true
+        value: "AtlasIQ@2026"
