@@ -6,7 +6,7 @@
 
 **Natural language → SQL analytics platform** with multi-tenant RBAC, audit logging, and automated reports.
 
-Solo-built end-to-end by **[Veerasegaran V P](https://github.com/veera-1175)** — an independent full-stack product showcasing NL→SQL, multi-tenant RBAC, and production-minded security.
+Built end-to-end by **[Veerasegaran V P](https://github.com/veera-1175)** — an independent full-stack product showcasing NL→SQL, multi-tenant RBAC, and production-minded security.
 
 <p align="center">
   <img src="docs/screenshots/01-login.png" alt="AtlasIQ login — multi-tenant analytics platform" width="900" />
