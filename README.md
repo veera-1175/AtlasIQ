@@ -5,8 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
 **Natural language → SQL analytics platform** with multi-tenant RBAC, audit logging, and automated reports.
-
-Built by **[Veera](https://github.com/veera-1175)**.
+> Built by [Veera](https://github.com/veera-1175).
 
 <p align="center">
   <img src="docs/screenshots/01-login.png" alt="AtlasIQ login — multi-tenant analytics platform" width="900" />
