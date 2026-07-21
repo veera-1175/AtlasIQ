@@ -6,7 +6,7 @@
 
 **Natural language → SQL analytics platform** with multi-tenant RBAC, audit logging, and automated reports.
 
-Built end-to-end by **[Veerasegaran V P](https://github.com/veera-1175)** — an independent full-stack product showcasing NL→SQL, multi-tenant RBAC, and production-minded security.
+Built by **[veera](https://github.com/veera-1175)**.
 
 <p align="center">
   <img src="docs/screenshots/01-login.png" alt="AtlasIQ login — multi-tenant analytics platform" width="900" />
@@ -388,7 +388,7 @@ On Render, `RENDER_EXTERNAL_URL` is detected automatically for CORS and public l
 
 ## Author
 
-**Veerasegaran V P**
+**veera**
 
 - GitHub: [@veera-1175](https://github.com/veera-1175)
 - Repository: [github.com/veera-1175/AtlasIQ](https://github.com/veera-1175/AtlasIQ)
