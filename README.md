@@ -1,8 +1,8 @@
 # AtlasIQ
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-atlasiq--sunc.onrender.com-00C7B7?style=for-the-badge)](https://atlasiq-sunc.onrender.com)
-[![GitHub](https://img.shields.io/badge/GitHub-veera--1175%2FAtlasIQ-181717?logo=github)](https://github.com/veera-1175/AtlasIQ)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![GitHub](https://img.shields.io/badge/GitHub-veera--1175%2FAtlasIQ-181717?style=for-the-badge&logo=github)](https://github.com/veera-1175/AtlasIQ)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
 **Natural language → SQL analytics platform** with multi-tenant RBAC, audit logging, and automated reports.
 
